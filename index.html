@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforme Suas Habilidades em Manicure</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            letter-spacing: 2px;
+            background-color: #d323d6;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-transform: uppercase;
+            padding: 1px;
+            text-align: center;
+            box-shadow: 0 2px 9px 5px rgba(0, 0, 0, 0.2);
+        }
+        header p {
+            margin: 3px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Seções intercaladas com imagens */
+        .section-imagem {
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 100px;
+        }
+
+        .section-imagem img {
+            width: 100%;
+            height: auto;
+        }
+
+        .texto-sobreposto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* Seções coloridas */
+        #introducao {
+            background-color: #ffe6e6;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 50px;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+        }
+
+        #conteudo {
+            background-color: #f0e6ff;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 50px;
+        }
+
+        #beneficios {
+            background-color: #fff4e6;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 50px;
+        }
+
+        #avaliacoes {
+            background-color: #e6fff2;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 50px;
+        }
+
+        #faq {
+            background-color: #fff4e6;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+        }
+
+        #compra {
+            background-color: #e6f7ff;
+            box-shadow: 0px 10px 10px 1px;
+            letter-spacing: 1px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 50px;
+        }
+
+        /* Estilo da imagem da capa */
+        .capa-ebook {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 5px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 1px black;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .button-hover {
+            background-color: #cf07cf;
+            color: white;
+            letter-spacing: 2px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 1px black;
+        }
+
+        .button-hover:hover {
+            background-color: #730077;
+            transform: scale(1.05);
+        }
+
+        .faq-item {
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .faq-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>O guia definitivo para manicures profissionais.</p>
+    </header>
+
+    <main>
+        <!-- Imagem da Capa do eBook -->
+        <img src="capa-ebook-manicure-600px-600px.jpeg" alt="Capa do eBook" class="capa-ebook">
+
+        <section id="introducao" class="fade-in">
+            <h2>Bem-vindo!</h2>
+            <p>Descubra como nosso eBook pode elevar suas habilidades em manicure, ajudando você a se destacar no
+                mercado.</p>
+                <button class="button-hover" onclick="linkPagamento()">Adquirir e-Book!</button>        </section>
+        <div class="section-imagem fade-in">
+            <img src="imagem-manicure-03.jpeg" alt="Manicure 1">
+            <div class="texto-sobreposto">
+                <h2>Técnicas de Nail Art</h2>
+                <p>Aprenda a criar designs incríveis para suas clientes.</p>
+            </div>
+        </div>
+
+        <section id="conteudo" class="fade-in">
+            <h2>Conteúdo do eBook</h2>
+            <p>O eBook é dividido em seções que cobrem desde os fundamentos da manicure até técnicas avançadas. Você
+                aprenderá sobre:</p>
+            <ul>
+                <li>Anatomia da unha e cuidados essenciais.</li>
+                <li>Técnicas de corte e lixamento.</li>
+                <li>Aplicação de esmalte e nail art.</li>
+                <li>Dicas para fidelização de clientes e marketing pessoal.</li>
+            </ul>
+        </section>
+
+        <section id="beneficios" class="fade-in">
+            <h2>Por Que Comprar Este eBook?</h2>
+            <ul>
+                <li><strong>Aprendizado Completo:</strong> Desde os princípios básicos até técnicas avançadas.</li>
+                <li><strong>Habilidades Práticas:</strong> Dicas e truques que você pode aplicar imediatamente.</li>
+                <li><strong>Autoconfiança:</strong> Melhore suas habilidades e se destaque no mercado.</li>
+                <li><strong>Empoderamento:</strong> Transforme sua paixão em uma carreira de sucesso.</li>
+            </ul>
+        </section>
+        <div class="section-imagem fade-in">
+            <img src="imagem-manicure-01.jpeg" alt="Manicure 3">
+            <div class="texto-sobreposto">
+                <h2>Estilos e Tendências</h2>
+                <p>Mantenha-se atualizada com as últimas tendências em manicure.</p>
+            </div>
+        </div>
+
+        <section id="avaliacoes" class="fade-in">
+            <h2>Avaliações</h2>
+            <div class="avaliacao">
+                <span>★★★★★</span>
+                <p>"Esse eBook mudou minha carreira! As dicas são preciosas." - Maria S.</p>
+            </div>
+            <div class="avaliacao">
+                <span>★★★★★</span>
+                <p>"As técnicas são fáceis de seguir e muito eficazes!" - Ana P.</p>
+            </div>
+            <div class="avaliacao">
+                <span>★★★★★</span>
+                <p>"Finalmente, um guia completo e prático!" - Carla M.</p>
+            </div>
+        </section>
+
+        <section id="faq" class="fade-in">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <p><strong>1. O eBook é adequado para iniciantes?</strong></p>
+                <p>Sim! O conteúdo foi elaborado para atender todos os níveis de habilidade.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>2. Posso aplicar as técnicas em casa?</strong></p>
+                <p>Claro! As técnicas são fáceis de seguir e podem ser aplicadas em casa.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>3. Quais ferramentas são necessárias?</strong></p>
+                <p>Fornecemos uma lista completa de ferramentas essenciais no eBook.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>4. O eBook oferece suporte?</strong></p>
+                <p>Sim! Os leitores têm acesso a um grupo exclusivo para tirar dúvidas e compartilhar experiências.</p>
+            </div>
+        </section>
+
+        <section id="compra" class="fade-in">
+            <h2>Adquira Agora Mesmo!</h2>
+            <p>Transforme suas habilidades em manicure e dê um passo em direção ao sucesso!</p>
+            <button class="button-hover" onclick="linkPagamento()">Adquirir e-Book!</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function linkPagamento () {
+            location.href = "https://pay.hotmart.com/K95999670F"
+        }
+    </script>
+
+</body>
+
+</html>
