@@ -132,12 +132,12 @@
 
         /* Estilo da imagem da capa */
         .capa-ebook {
-            max-width: 80%;
+            max-width: 100%;
             height: auto;
             display: block;
-            margin: 5px auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 1px black;
+            margin: 30px auto;
+            border-radius: 50px;
+            box-shadow: 0px 2px 20px 0px black;
         }
 
         /* Animações */
@@ -167,6 +167,10 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             border-radius: 5px;
             box-shadow: 0px 0px 5px 1px black;
+            animation-name: anima-frase-acao;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
         }
 
         .button-hover:hover {
@@ -185,6 +189,28 @@
         .faq-item:hover {
             background-color: #f0f0f0;
         }
+        .frase-efeito-animacao a {
+            text-decoration: none;
+            color: white;
+        }
+        .frase-efeito-animacao {
+            text-align: center;
+            margin: 0;
+            color: white;
+            padding: 2px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation-name: anima-frase-acao;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes anima-frase-acao {
+            50% {
+                background-color: rgb(126, 0, 145);
+                color: white;
+            }
+        }
     </style>
 </head>
 
@@ -193,10 +219,13 @@
     <header>
         <p>O guia definitivo para manicures profissionais.</p>
     </header>
+    <section class="frase-efeito-animacao">
+        <p><a href="https://pay.hotmart.com/K95999670F">Aprenda a arte da manicure agora!</a></p>
+    </section>
 
     <main>
         <!-- Imagem da Capa do eBook -->
-        <img src="capa-ebook-manicure-600px-600px.jpeg" alt="Capa do eBook" class="capa-ebook">
+        <img src="foto-ebook-manicure.png" alt="Capa do eBook" class="capa-ebook">
 
         <section id="introducao" class="fade-in">
             <h2>Bem-vindo!</h2>
@@ -239,6 +268,9 @@
                 <p>Mantenha-se atualizada com as últimas tendências em manicure.</p>
             </div>
         </div>
+        <section class="frase-efeito-animacao">
+            <p><a href="https://pay.hotmart.com/K95999670F">Desperte a manicure que existe em você!</a></p>
+        </section>
 
         <section id="avaliacoes" class="fade-in">
             <h2>Avaliações</h2>
@@ -269,10 +301,6 @@
             <div class="faq-item">
                 <p><strong>3. Quais ferramentas são necessárias?</strong></p>
                 <p>Fornecemos uma lista completa de ferramentas essenciais no eBook.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>4. O eBook oferece suporte?</strong></p>
-                <p>Sim! Os leitores têm acesso a um grupo exclusivo para tirar dúvidas e compartilhar experiências.</p>
             </div>
         </section>
 
